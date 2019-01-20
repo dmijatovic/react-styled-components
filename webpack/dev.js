@@ -4,8 +4,6 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-//const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 //load stats configuration
 const { stats } = require('./stats')
 //construct dist folder location
@@ -41,32 +39,7 @@ module.exports = {
             }
           }
         ]
-      } /*
-			migrated to CSS in JS
-			using styled components
-		{
-			test: /\.(scss|css)$/,
-			use: [
-				//extract css into separate file
-				MiniCssExtractPlugin.loader,
-				{
-					loader: 'css-loader',
-					options:{
-						sourceMap: true
-					}
-				},{
-					loader: 'postcss-loader',
-					options:{
-						sourceMap:true
-					}
-				},{
-					loader: 'sass-loader',
-					options:{
-						sourceMap: true
-					}
-				}
-			]
-		},*/
+      }
     ]
   },
 
